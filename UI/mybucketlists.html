@@ -1,0 +1,59 @@
+<html>
+<title>Bucketlists</title>
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css">
+</head>
+<body style="background-color:#DDD">
+  <nav class="navbar"style="background-color:#20A2AA;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="mybucketlist.html">Bucketlist</a>
+    </div>
+    <ul class="nav navbar-nav pull-right">
+      <li class="active"><a href="create.html" style="font-color:#FFFFF;">Create</a></li>
+      <li><a href="register.html">logout</a></li>
+      
+    </ul>
+  </div>
+</nav>
+<div class="col-md-4 ">  
+<div class="panel panel-info">
+  <div class="panel-heading">
+<div class="alert alert-danger">Your buckets here  
+  </div>
+    <div class="panel-body">
+      <a href="edit.html" class="btn btn-primary fa fa-pencil -sm pull-right">edit</a>
+      <button type="button" class="btn btn-primary fa fa-plus -sm pull-right" data-toggle="modal" data-target="#myEdit">add</button>
+      <button type="button" class="btn btn-primary fa fa-trash -sm pull-right" data-toggle="modal" data-target="#myDelete">delete</button>
+    </div>
+  </div>
+  </div>
+
+  </div>
+</body>
+<div id="myEdit" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add items</h4>
+      </div>
+      <div class="modal-body">
+        <input type="text" name="item" placeholder="add an item into this Bucketlist" class="form-control">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="css/bootstrap/js/bootstrap.min.js" ></script>
+
+</html>
+
+

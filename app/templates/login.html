@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="..\static\css\app.css"> 
+</head>
+<body>
+  <section class="top">
+    <div class="icon-left"><a href="">Home</a></div>
+    <form  action={{url_for('logins')}} method="POST">
+    <div class="icon-right">
+      <div class="icon link"><a href="/login" style="">Login</a></div>
+      <div class="icon link"><a href="/">Register</a></div>
+    </div>
+
+  </section>
+  {% if data %}
+  <center><div class="error">{{ data }}</div></center>
+  {% endif %}
+  <div class="panel" style="padding:30px;padding-top: 50px">
+
+    <label class="text" ><center>Please Login Here</center></label>
+
+    
+
+    <center><input type="email" class= "input" name="email" placeholder="Your email" ></center>
+    <center><input type="password" class= "input" name="password" placeholder="Your password"></center>
+
+    <center><button type="submit" class="button">Login</button></center>
+    <center style="margin-top: 70px"><label  ><small>No account? click here<a href="/">Register</a></small></label></center>
+  </div>
+<center><footer class="footer"><small>copyright @BootcampBucketlist 2017|developed by James Collins Macharia #TIA</small></footer></center>
+</body>
+</html>

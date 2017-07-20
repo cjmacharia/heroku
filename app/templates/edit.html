@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+	<title>Edit bucketlist</title>
+	<link rel="stylesheet" type="text/css" href="..\static\css\app.css">
+</head>
+<body style="background-image: none; background-color: #DDD">
+<section class="top">
+<div class="icon-left"><a href="/home/">Home</a></div>
+      <div class="icon-right">
+      <div class="icon link"><a href="/mybuckets">My buckets</a></div>
+        <div class="icon link"><a href={{url_for('logout')}}>Logout</a></div>
+      </div>
+    </section>
+    {% if msg%}
+    <center><div class="error">{{ msg }}</div></center>
+    {% endif %}
+   <div class="add-new" style="padding: 20px">
+   {% if data %}
+     <form  action={{url_for('editbucket')}} method="POST">
+     <center><h1>Edit a Bucketlist</h1></center>
+     <center ><input type="text"  style="width: 500px" name="post" value="{{data["post"] }}">
+     <input type="hidden"  style="width: 500px" name="old" value="{{data["post"] }}"></center>
+      <center ><input type="text"  style="width: 500px" name="description" value="{{ data["description"] }}"></center>
+     
+     <center><button type="submit" style="width: 530px"class="button">Update Bucketlist</button></center>
+     </form>
+    {% endif %}
+   </div>
+</body>
+<center><footer class="footer" style="margin-top: 130px;"><small>copyright @ BootcampBucketlist 2017|developed by James collins Macharia #TIA  </small></footer></center>
+</html>
